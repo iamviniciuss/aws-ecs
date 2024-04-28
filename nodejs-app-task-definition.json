@@ -4,7 +4,7 @@
         {
             "name": "nodejs-app",
             "image": "992382576119.dkr.ecr.us-east-1.amazonaws.com/nodejs-app:latest",
-            "cpu": 1,
+            "cpu": 1024,
             "portMappings": [
                 {
                     "name": "nodejs-app-80-tcp",

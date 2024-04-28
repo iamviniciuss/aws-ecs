@@ -7,13 +7,6 @@
             "cpu": 1024,
             "portMappings": [
                 {
-                    "name": "nodejs-app-80-tcp",
-                    "containerPort": 80,
-                    "hostPort": 80,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
-                },
-                {
                     "name": "app",
                     "containerPort": 5000,
                     "hostPort": 5000,

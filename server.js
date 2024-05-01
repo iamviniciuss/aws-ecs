@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 
-setInterval(() => {
-    console.log("16. rodando...")
-}, 15000)
+app.get("/health-check", (req, res) => {
+  console.log("health-check!");
+  res.send("OK")
+});
 
 app.get("/", (req, res) => {
-    console.log("hellooow!");
     res.send("Hello world em golang!")
 });
 

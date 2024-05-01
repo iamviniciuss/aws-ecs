@@ -3,12 +3,12 @@ const app = express();
 const PORT = 5000;
 
 setInterval(() => {
-    console.log("15. rodando...")
+    console.log("16. rodando...")
 }, 15000)
 
 app.get("/", (req, res) => {
     console.log("hellooow!");
-    res.send("Hello world em javascript!")
+    res.send("Hello world em javascript 2!")
 });
 
 app.listen(PORT, () => {

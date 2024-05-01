@@ -50,3 +50,4 @@ jobs:
           service: aws04-ec2-service
           cluster: aws04-ec2-cluster
           wait-for-service-stability: false    
+          force-new-deployment: true

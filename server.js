@@ -8,7 +8,7 @@ setInterval(() => {
 
 app.get("/", (req, res) => {
     console.log("hellooow!");
-    res.send("Hello camila!")
+    res.send("Hello world em javascript!")
 });
 
 app.listen(PORT, () => {

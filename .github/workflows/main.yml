@@ -49,5 +49,5 @@ jobs:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: aws04-ec2-service
           cluster: aws04-ec2-cluster
-          wait-for-service-stability: false    
+          wait-for-service-stability: true    
           force-new-deployment: true

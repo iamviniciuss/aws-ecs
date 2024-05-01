@@ -4,7 +4,7 @@
         {
             "name": "nodejs-app",
             "image": "992382576119.dkr.ecr.us-east-1.amazonaws.com/nodejs-app:latest",
-            "cpu": 1024,
+            "cpu": 512,
             "portMappings": [
                 {
                     "name": "app",
@@ -70,7 +70,7 @@
         "EC2"
     ],
     "cpu": "1024",
-    "memory": "2048",
+    "memory": "1024",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"

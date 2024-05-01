@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:992382576119:task-definition/nodejs-app-task-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:992382576119:task-definition/nodejs-app-task-definition:12",
     "containerDefinitions": [
         {
             "name": "nodejs-app",
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -35,8 +33,8 @@
     ],
     "family": "nodejs-app-task-definition",
     "executionRoleArn": "arn:aws:iam::992382576119:role/ecsTaskExecutionRole",
-    "networkMode": "awsvpc",
-    "revision": 1,
+    "networkMode": "bridge",
+    "revision": 12,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -56,17 +54,14 @@
             "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
     ],
     "placementConstraints": [],
     "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
         "EC2"
     ],
     "cpu": "512",
@@ -75,7 +70,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-04-28T22:24:31.582Z",
+    "registeredAt": "2024-05-01T18:55:03.820Z",
     "registeredBy": "arn:aws:iam::992382576119:root",
     "tags": []
 }

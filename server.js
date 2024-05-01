@@ -8,7 +8,7 @@ app.get("/health-check", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Hello world em golang!")
+    res.send("Hello world em javascript!")
 });
 
 app.listen(PORT, () => {

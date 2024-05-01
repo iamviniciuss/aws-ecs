@@ -4,6 +4,13 @@
         {
             "name": "nodejs-app",
             "image": "992382576119.dkr.ecr.us-east-1.amazonaws.com/nodejs-app:latest",
+            "healthCheck": {
+                "command": ["CMD-SHELL", "curl -f http://localhost:5000/health-check || exit 1"],
+                "interval": 30,
+                "timeout": 5,
+                "retries": 3,
+                "startPeriod": 60
+            },
             "cpu": 128,
             "memoryReservation": 128,
             "memory": 128,

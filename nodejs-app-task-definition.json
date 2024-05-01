@@ -1,19 +1,12 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:992382576119:task-definition/nodejs-app-task-definition:12",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:992382576119:task-definition/nodejs-app-task-definition:27",
     "containerDefinitions": [
         {
             "name": "nodejs-app",
             "image": "992382576119.dkr.ecr.us-east-1.amazonaws.com/nodejs-app:latest",
-            "healthCheck": {
-                "command": ["CMD-SHELL", "curl -f http://localhost:5000/health-check || exit 1"],
-                "interval": 30,
-                "timeout": 5,
-                "retries": 3,
-                "startPeriod": 60
-            },
             "cpu": 128,
-            "memoryReservation": 128,
             "memory": 128,
+            "memoryReservation": 128,
             "portMappings": [
                 {
                     "name": "app",
@@ -37,13 +30,23 @@
                 },
                 "secretOptions": []
             },
+            "healthCheck": {
+                "command": [
+                    "CMD-SHELL",
+                    "curl -f http://localhost:5000/health-check || exit 1"
+                ],
+                "interval": 5,
+                "timeout": 60,
+                "retries": 3,
+                "startPeriod": 0
+            },
             "systemControls": []
         }
     ],
     "family": "nodejs-app-task-definition",
     "executionRoleArn": "arn:aws:iam::992382576119:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
-    "revision": 12,
+    "revision": 27,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -58,6 +61,12 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "ecs.capability.container-health-check"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -79,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-05-01T18:55:03.820Z",
+    "registeredAt": "2024-05-01T20:43:42.412Z",
     "registeredBy": "arn:aws:iam::992382576119:root",
     "tags": []
 }

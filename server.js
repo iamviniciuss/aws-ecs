@@ -3,8 +3,8 @@ const app = express();
 const PORT = 5000;
 
 setInterval(() => {
-    console.log("rodando...")
-}, 5000)
+    console.log("15. rodando...")
+}, 15000)
 
 app.get("/", (req, res) => {
     console.log("hellooow!");
